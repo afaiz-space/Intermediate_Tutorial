@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify loader</title>
+    <style type="text/css">
+        .loader{
+            position: absolute;
+            display: flex;
+            top: 50%;
+            /* right: 40%; */
+            left: 50%;
+
+        }
+        .ball1{
+            width:14px;
+            height: 14px;
+            background:#fc0069;
+            border-radius: 50%;
+            margin: 10px;
+            animation: grow .7s ease-in infinite alternate;
+        }
+        .ball1:nth-child(2)
+        {
+            animation-delay: .30s;
+            background-color: yellow;
+        }
+        .ball1:nth-child(3){
+            animation-delay: 0.53s;
+            background-color: green;
+        }
+        @keyframes grow{
+            to{
+                transform: translatey(50%) scale(1.5);
+                background-color: rgb(0, 255, 157);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="ball1"></div>
+        <div class="ball1"></div>
+        <div class="ball1"></div>
+    </div>
+</body>
+</html>

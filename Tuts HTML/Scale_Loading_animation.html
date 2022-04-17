@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale loading animation</title>
+    <style type="text/css">
+        .loader{
+            display:flex;
+            align-items: center;
+            position: relative;
+            top: 100px;
+            left: 100px;
+
+        }
+        .bar{
+            display: inline-block;
+            width: 3px;
+            height: 20px;
+            background-color: black;
+            border-radius: 10px;
+            animation: scale-up 2s linear infinite;
+        }
+        .bar:nth-child(1){
+            animation-delay: .9s;
+        }
+        .bar:nth-child(2){
+            height: 35px;
+            margin: 0 5px;
+            animation-delay: .6s;
+
+        }
+        .bar:nth-child(3){
+            animation-delay: .8s;
+        }
+        @keyframes scale-up{
+            20%{
+                background-color: blueviolet;
+                transform: scaleY(1.5);
+            }
+            40%{
+                transform: scaleY(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <span class="bar">
+
+        </span>
+        <span class="bar">
+
+        </span>
+        <span class="bar">
+
+        </span>
+    </div>
+</body>
+</html>
